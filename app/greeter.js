@@ -9,6 +9,7 @@ import React, {Component} from 'react';
 import config from './config.json';
 import styles from './greeter.css';
 import Hello from './hello';
+import Document from './document';
 
 var names = ['Alice', 'Emily', 'Kate'];
 var hList = [
@@ -30,6 +31,7 @@ class Greeter extends Component{
                </div>
                <p>传过来的数据{this.props.name}</p>
                <Hello name="hello"></Hello>
+               <Document></Document>
            </div>
        )
    }
