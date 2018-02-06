@@ -8,8 +8,13 @@ module.exports = function () {
 import React, {Component} from 'react';
 import config from './config.json';
 import styles from './greeter.css';
+import Hello from './hello';
 
 var names = ['Alice', 'Emily', 'Kate'];
+var hList = [
+    <h3 key="1">Hello world!</h3>,
+    <h4 key="2">React is awesome</h4>
+];
 class Greeter extends Component{
    render(){
        return(
@@ -20,6 +25,11 @@ class Greeter extends Component{
                        return <div className={styles.root_map} key={index}>Hello {name}.</div>
                    })
                }
+               <div className={styles.root_h4}>
+                   {hList}
+               </div>
+               <p>传过来的数据{this.props.name}</p>
+               <Hello name="hello"></Hello>
            </div>
        )
    }

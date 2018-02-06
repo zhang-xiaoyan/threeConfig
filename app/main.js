@@ -6,4 +6,4 @@ import ReactDOM from 'react-dom';
 import Greeter from './greeter';
 import './main.css';
 
-ReactDOM.render(<Greeter/>, document.getElementById('root'));
+ReactDOM.render(<Greeter name="xxx"/>, document.getElementById('root'));
