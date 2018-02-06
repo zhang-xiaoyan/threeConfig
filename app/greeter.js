@@ -9,11 +9,17 @@ import React, {Component} from 'react';
 import config from './config.json';
 import styles from './greeter.css';
 
+var names = ['Alice', 'Emily', 'Kate'];
 class Greeter extends Component{
    render(){
        return(
            <div className={styles.root}>
                {config.greetText}
+               {
+                   names.map(function (name, index) {
+                       return <div className={styles.root_map} key={index}>Hello {name}.</div>
+                   })
+               }
            </div>
        )
    }
