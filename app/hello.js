@@ -31,8 +31,8 @@ class Hello extends Component{
     changeState(){
         this.setState({liked: !this.state.liked});
     }
-    handleChange(){
-        
+    handleChange(event){
+        this.setState({value: event.target.value});
     }
 }
 export default Hello;
