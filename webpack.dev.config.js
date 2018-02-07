@@ -30,7 +30,31 @@ module.exports = merge(webpackBaseConfig, {
         contentBase: "./public",//本地服务器所加载的页面所在的目录
         historyApiFallback: true,//不跳转
         inline: true,//实时刷新
-        hot: true
+        hot: true,
+        /*proxy: {
+            '/mapping/*': {
+                target: 'http://trip.hotel.man.jd.com',
+                headers: {
+                    Host: 'trip.hotel.man.jd.com',
+                    Origin: 'http://trip.hotel.man.jd.com'
+                }
+            },
+            '/api/man/settle/*': {
+                target: 'http://trip1.hotel.man.jd.com',
+                headers: {
+                    Host: 'trip.hotel.man.jd.com',
+                    Origin: 'http://trip.hotel.man.jd.com'
+                }
+            },
+            '/api/man/promotion/*': {
+                target: 'http://man.promotion.hotel.jd.com',
+                headers: {
+                    Host: 'man.promotion.hotel.jd.com',
+                    Origin: 'http://man.promotion.hotel.jd.com'
+                }
+
+            },
+        }*/
     },
     devtool: "source-map",
     plugins: [
