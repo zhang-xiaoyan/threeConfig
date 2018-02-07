@@ -22,15 +22,13 @@ class Greeter extends Component{
            <div className={styles.root}>
                {config.greetText}
                {
-                   names.map(function (name, index) {
+                   /*names.map(function (name, index) {
                        return <div className={styles.root_map} key={index}>Hello {name}.</div>
-                   })
+                   })*/
                }
-               <div className={styles.root_h4}>
-                   {hList}
-               </div>
-               <p>传过来的数据{this.props.name}</p>
-               <Hello name="hello"></Hello>
+               {/*<div className={styles.root_h4}>{hList}</div>*/}
+               {/*<p>传过来的数据{this.props.name}</p>*/}
+               {/*<Hello name="hello"></Hello>*/}
                <Document></Document>
            </div>
        )
