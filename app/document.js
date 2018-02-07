@@ -18,10 +18,9 @@ class Document extends Component{
         )
     }
     tick() {
-
-        /*this.setState(prevState => ({
+        this.setState(prevState => ({
             seconds: prevState.seconds + 1
-        }));*/
+        }));
     }
     test(){
         // 如果没有在 constructor 里面 this.test = this.test.bind(this) 这样是取不到 this
@@ -29,8 +28,11 @@ class Document extends Component{
     }
     componentDidMount(){
         console.log('生命周期:', this);
-        this.test(); // 如果没有在 constructor 里面 this.test = this.test.bind(this) 这样能取到 this
+        //this.test(); // 如果没有在 constructor 里面 this.test = this.test.bind(this) 这样能取到 this
         //this.interval = setInterval(() => this.tick(), 1000);
+    }
+    componentWillUnmount(){
+        clearInterval(this.interval);
     }
 }
 export default Document;

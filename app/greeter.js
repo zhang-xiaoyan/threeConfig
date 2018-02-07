@@ -10,6 +10,7 @@ import config from './config.json';
 import styles from './greeter.css';
 import Hello from './hello';
 import Document from './document';
+import Demo1 from './demo1';
 
 var names = ['Alice', 'Emily', 'Kate'];
 var hList = [
@@ -29,7 +30,8 @@ class Greeter extends Component{
                {/*<div className={styles.root_h4}>{hList}</div>*/}
                {/*<p>传过来的数据{this.props.name}</p>*/}
                {/*<Hello name="hello"></Hello>*/}
-               <Document></Document>
+               {/*<Document></Document>*/}
+               <Demo1 increment='1'></Demo1>
            </div>
        )
    }
