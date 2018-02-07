@@ -13,7 +13,7 @@ class Demo1 extends Component{
                 lastName: 'Perez'
             },
             date: new Date(),
-            counter: 1
+            counter: 0
         };
     }
     render(){
@@ -41,9 +41,14 @@ class Demo1 extends Component{
         });
     }
     changeCounter(){
-        this.setState({
+        /*this.setState({
             counter: this.state.counter + this.props.increment,
-        });
+        });*/
+
+        //异步要用下面的方式(参照API)
+        this.setState((prevState, props) => ({
+            counter: Number(prevState.counter) + Number(props.increment)
+        }));
     }
     formatName(user){
         return user.firstName + ' ' + user.lastName;
