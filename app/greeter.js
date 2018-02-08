@@ -31,7 +31,7 @@ class Greeter extends Component{
                {/*<p>传过来的数据{this.props.name}</p>*/}
                {/*<Hello name="hello"></Hello>*/}
                {/*<Document></Document>*/}
-               <Demo1 increment='1'></Demo1>
+               <Demo1 increment={1} isLoggedIn={true}></Demo1>
            </div>
        )
    }
