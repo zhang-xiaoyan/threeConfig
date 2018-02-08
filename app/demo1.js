@@ -26,11 +26,13 @@ class Demo1 extends Component{
                 <div>It is {date.toLocaleTimeString()}</div>
                 <button onClick={this.changeCounter}>点击更改下面数据:</button>
                 <div>{counter}</div>
+                {/*<button onClick={this.preventPop.bind(this, counter)}>获取e</button>*/}
+                <button onClick={(e)=>this.preventPop(counter, e)}>获取e</button>
             </section>
         )
     }
     componentDidMount(){
-        this.timerID = setInterval(() => this.tick(), 1000);
+        //this.timerID = setInterval(() => this.tick(), 1000);
     }
     componentWillUnmount(){
         clearInterval(this.timerID);
@@ -58,6 +60,10 @@ class Demo1 extends Component{
             return <p>Hello, {this.formatName(user)}!</p>;
         }
         return <p>Hello, Stranger.</p>;
+    }
+    preventPop(counter, e){
+        console.log('counter:', counter);
+        console.log('e:', e);
     }
 }
 export default Demo1;
