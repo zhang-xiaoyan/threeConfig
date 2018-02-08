@@ -3,7 +3,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Greeter from './greeter';
+import LoginControl from './LoginControl';
 import './main.css';
 
-ReactDOM.render(<Greeter name="xxx"/>, document.getElementById('root'));
+ReactDOM.render(<LoginControl/>, document.getElementById('root'));
