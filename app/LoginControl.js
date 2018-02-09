@@ -4,6 +4,7 @@ import Greeting from './Greeting';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
 import NumberList from './NumberList';
+import NameForm from './NameForm';
 
 class LoginControl extends Component{
    constructor(props){
@@ -39,6 +40,7 @@ class LoginControl extends Component{
                <Greeting isLoggedIn={isLoggedIn}/>
                {button}
                <NumberList numberList={numberList}/>
+               <NameForm/>
            </section>
        )
    }
