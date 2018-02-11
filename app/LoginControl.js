@@ -5,6 +5,8 @@ import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
 import NumberList from './NumberList';
 import NameForm from './NameForm';
+import FlavorForm from './FlavorForm';
+import Reservation from './Reservation';
 
 class LoginControl extends Component{
    constructor(props){
@@ -41,6 +43,8 @@ class LoginControl extends Component{
                {button}
                <NumberList numberList={numberList}/>
                <NameForm/>
+               <FlavorForm/>
+               <Reservation/>
            </section>
        )
    }
